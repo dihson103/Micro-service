@@ -1,0 +1,27 @@
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    service-url:
+      defaultZone: http://localhost:8080/eureka
+
+server:
+  port: 8070
+
+spring:
+  application:
+    name: schools
+  datasource:
+    url: jdbc:sqlserver://localhost:1111;databaseName=schools;encrypt=true;trustServerCertificate=true
+    username: sa
+    password: 12345
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+
+application:
+  config:
+    students-url: http://localhost:3000/api/v1/students
